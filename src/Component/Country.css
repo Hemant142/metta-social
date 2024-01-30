@@ -1,0 +1,64 @@
+.country-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .country-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+  
+  .country-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .country-flag {
+    width: 50%;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .country-name {
+    font-weight: bold;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .page-item {
+    margin: 0 5px;
+  }
+  
+  .page-link {
+    padding: 5px 10px;
+    background-color: #f0f0f0; /* Initial gray color */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .page-link:hover {
+    background-color: #ddd; /* Hover color */
+  }
+  
+  .page-link.active {
+    background-color: #007bff; /* Active color */
+    color: #fff;
+  }
+  
