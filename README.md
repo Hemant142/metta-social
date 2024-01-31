@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Task Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Empower your productivity with our intuitive task management app, facilitating seamless creation, updating, and deletion of tasks for efficient organization. 
 
-## Available Scripts
+# Deployed Link
+ [Live](https://metta-social-tau.vercel.app/)
 
-In the project directory, you can run:
 
-### `npm start`
+# Features offered
+- Search 
+ Users can search for countries by their names or currencies. The search is dynamic, providing real-time results as the user types
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Pagination:
+  The application displays countries in pages, with a limited number of countries per page. Users can navigate through pages to view more countries.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+- Responsive Design :
+ The application is designed to work seamlessly on various devices, ensuring an optimal user experience on desktops, laptops, tablets, and mobile phones.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Debouncing:
+  To enhance performance, debouncing is implemented in the search functionality, reducing unnecessary API calls and filtering operations.
 
-### `npm run build`
+- Country Information:
+ Each country card displays essential information such as the country name, flag, and currency.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Note:
+With these features, the Country application offers users an intuitive way to search for and explore country information with ease.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## TechStack used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Frontend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React.js | Javascript |  CSS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Installation and Setup
+1. Clone the repository:
+- For frontend
+```bash
+git clone `https://github.com/Hemant142/metta-social` 
+```
+install the dependencies
+```
+npm install
+```
+run project
+```
+npm run start
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# ScreenShots
 
-### Code Splitting
+## Home Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[![HomePage.png](https://i.postimg.cc/9QHZ0d72/Laptop.png)](https://postimg.cc/dLnLST6N)
 
-### Analyzing the Bundle Size
+## Search 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[![Search.png](https://i.postimg.cc/BvYCj83C/Search.png)](https://postimg.cc/VSttTkdS)
 
-### Making a Progressive Web App
+## Tablet Screen
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[![Tablet.png](https://i.postimg.cc/4ydkzHHN/Tablet.png)](https://postimg.cc/YGJs79xJ)
 
-### Advanced Configuration
+## Mobile Screen
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![Mobile.png](https://i.postimg.cc/CL8YJD6z/Mobile.png)](https://postimg.cc/tY9L41bj)

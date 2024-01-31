@@ -69,6 +69,7 @@ const Country = () => {
   return (
     <div className="country-container">
       {/* Search */}
+      <div  className="search-bar">
       <input
         type="text"
         placeholder="Search by country or currency..."
@@ -76,6 +77,7 @@ const Country = () => {
         onChange={handleSearch}
         className="search-bar"
       />
+      </div>
       {/* Display Card */}
       <div className="country-grid">
         {currentCards.map((country) => (
