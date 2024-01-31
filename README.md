@@ -1,6 +1,6 @@
-# Task Management App
+# Search and Explore Countries
 
-Empower your productivity with our intuitive task management app, facilitating seamless creation, updating, and deletion of tasks for efficient organization. 
+Explore countries with dynamic search, pagination, and responsive design. Effortlessly find countries by name or currency, navigate through pages, and enjoy a seamless experience on any device. Debouncing enhances performance, while each country card provides essential information for easy exploration.
 
 # Deployed Link
  [Live](https://metta-social-tau.vercel.app/)
