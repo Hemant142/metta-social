@@ -66,9 +66,6 @@ npm run start
 
 [![Search.png](https://i.postimg.cc/BvYCj83C/Search.png)](https://postimg.cc/VSttTkdS)
 
-## Tablet Screen
-
-[![Tablet.png](https://i.postimg.cc/4ydkzHHN/Tablet.png)](https://postimg.cc/YGJs79xJ)
 
 ## Mobile Screen
 
