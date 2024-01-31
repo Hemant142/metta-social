@@ -6,6 +6,10 @@ Empower your productivity with our intuitive task management app, facilitating s
  [Live](https://metta-social-tau.vercel.app/)
 
 
+# Video Link
+ [Video](https://drive.google.com/file/d/197LAPm9hGYBRSbvEwFBPr-rOqz9kYysH/view?usp=sharing)
+
+
 # Features offered
 - Search 
  Users can search for countries by their names or currencies. The search is dynamic, providing real-time results as the user types
@@ -37,7 +41,7 @@ React.js | Javascript |  CSS
 
 # Installation and Setup
 1. Clone the repository:
-- For frontend
+
 ```bash
 git clone `https://github.com/Hemant142/metta-social` 
 ```
