@@ -7,7 +7,8 @@ const Country = () => {
   const [filteredCountries, setFilteredCountries] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [cardsPerPage, setCardsPerPage] = useState(20);
+  const [cardsPerPage, setCardsPerPage] = useState(18);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,8 +16,10 @@ const Country = () => {
         const response = await axios.get("https://restcountries.com/v3.1/all");
         setCountries(response.data);
         setFilteredCountries(response.data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching countries:", error);
+        setLoading(false);
       }
     };
 
@@ -69,34 +72,40 @@ const Country = () => {
   return (
     <div className="country-container">
       {/* Search */}
-      <div  className="search-bar">
-      <input
-        type="text"
-        placeholder="Search by country or currency..."
-        value={searchTerm}
-        onChange={handleSearch}
-        className="search-bar"
-      />
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search by country or currency..."
+          value={searchTerm}
+          onChange={handleSearch}
+          className="search-input"
+        />
       </div>
-      {/* Display Card */}
-      <div className="country-grid">
-        {currentCards.map((country) => (
-          <div key={country.name.common} className="country-card">
-            <img
-              src={country.flags.png}
-              alt={country.name.common}
-              className="country-flag"
-            />
-            <p className="country-name">{country.name.common}</p>
-            <p className="country-currency">
-              Currency:{" "}
-              {country.currencies
-                ? Object.keys(country.currencies).join(", ")
-                : "N/A"}
-            </p>
-          </div>
-        ))}
-      </div>
+      {/* Loading Indicator */}
+      {loading && <div className="loading">Loading...</div>}
+      {/* Display Cards */}
+      {!loading && (
+        <div className="country-grid">
+          {currentCards.map((country) => (
+            <div key={country.name.common} className="country-card">
+              <div ><img
+                src={country.flags.png}
+                alt={country.name.common}
+                className="country-flag"
+              /></div>
+              <div>
+              <p className="country-name">{country.name.common}</p>
+              <p className="country-currency">
+                Currency:{" "}
+                {country.currencies
+                  ? Object.keys(country.currencies).join(", ")
+                  : "N/A"}
+              </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
       {/* Pagination */}
       <div className="pagination">
         {pageNumbers.map((number) => (
