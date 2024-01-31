@@ -21,22 +21,28 @@ const Country = () => {
     };
 
     fetchData();
-  }, []); // Empty dependency array ensures useEffect runs only once
+  }, []);
+
+  useEffect(() => {
+    const delayDebounceFn = setTimeout(() => {
+      const filtered = countries.filter(
+        (country) =>
+          country.name.common.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          (country.currencies &&
+            Object.keys(country.currencies)
+              .join(", ")
+              .toLowerCase()
+              .includes(searchTerm.toLowerCase()))
+      );
+      setFilteredCountries(filtered);
+      setCurrentPage(1);
+    }, 500);
+
+    return () => clearTimeout(delayDebounceFn);
+  }, [searchTerm, countries]);
 
   const handleSearch = (event) => {
-    const searchTerm = event.target.value;
-    setSearchTerm(searchTerm);
-    const filtered = countries.filter(
-      (country) =>
-        country.name.common.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (country.currencies &&
-          Object.keys(country.currencies)
-            .join(", ")
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()))
-    );
-    setFilteredCountries(filtered);
-    setCurrentPage(1); // Reset current page to 1 when search term changes
+    setSearchTerm(event.target.value);
   };
 
   // Get current cards
@@ -62,13 +68,15 @@ const Country = () => {
 
   return (
     <div className="country-container">
+      {/* Search */}
       <input
         type="text"
-        placeholder="Search by currency..."
+        placeholder="Search by country or currency..."
         value={searchTerm}
         onChange={handleSearch}
         className="search-bar"
       />
+      {/* Display Card */}
       <div className="country-grid">
         {currentCards.map((country) => (
           <div key={country.name.common} className="country-card">
@@ -87,6 +95,7 @@ const Country = () => {
           </div>
         ))}
       </div>
+      {/* Pagination */}
       <div className="pagination">
         {pageNumbers.map((number) => (
           <div key={number} className="page-item">
